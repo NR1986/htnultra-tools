@@ -8,6 +8,11 @@
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
 // @run-at       document-idle
+//
+// @updateURL    https://raw.githubusercontent.com/NR1986/htnultra-tools/main/HTN-Ultra-Upgrade-Ausblender.user.js
+// @downloadURL  https://raw.githubusercontent.com/NR1986/htnultra-tools/main/HTN-Ultra-Upgrade-Ausblender.user.js
+// @homepageURL  https://github.com/NR1986/htnultra-tools
+// @supportURL   https://github.com/NR1986/htnultra-tools/issues
 // ==/UserScript==
 
 (function () {
