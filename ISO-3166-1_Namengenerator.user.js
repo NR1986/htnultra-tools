@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HTN.ultra – PC-Namen aus Länder-IP und letztem IP-Oktett
 // @version      1.4.2
-// @description  Setzt ISO-3166-1-Ländercodes direkt gefolgt vom letzten Oktett der HTN-IP-Adresse in PC-Namen und zeigt einen Ausführungslog an.
+// @description  Setzt ISO-3166-2-Ländercodes direkt gefolgt vom letzten Oktett der HTN-IP-Adresse in PC-Namen und zeigt einen Ausführungslog an.
 // @author       NinoRossi
 // @match        https://www.htnultra.de/game.php*
 // @grant        GM_registerMenuCommand
@@ -53,7 +53,7 @@
       const iso = match && dialCodeToIso[Number(match[1])];
       if (!iso) {
         unknown += 1;
-        addLog(ip + ': Keine ISO-3166-1-Zuordnung gefunden.');
+        addLog(ip + ': Keine ISO-3166-2-Zuordnung gefunden.');
         return;
       }
       const newValue = iso + String(Number(match[2]));
@@ -66,7 +66,7 @@
       addLog(ip + ': „' + oldValue + '“ zu „' + newValue + '“ geändert.');
     });
     addLog('Fertig: ' + changed + ' Namen gesetzt, ' + unknown + ' ohne Zuordnung.');
-    alert(changed + ' PC-Namen im Format ISO-3166-1-Alpha-2 plus letztes IP-Oktett (z. B. AU81) gefüllt. Es werden keine Untergliederungen und keine Bindestriche verwendet.');
+    alert(changed + ' PC-Namen im Format ISO-3166-2 plus letztes IP-Oktett (z. B. AU81) gefüllt. Es werden keine Untergliederungen und keine Bindestriche verwendet.');
   }
 
   function addInterface() {
@@ -75,7 +75,7 @@
     if (!form) return;
     const controls = document.createElement('p');
     controls.id = 'htn-iso-controls';
-    controls.innerHTML = '<button type="button" id="htn-iso-apply">ISO-3166-1-Ländercode und letztes IP-Oktett einsetzen</button> <button type="button" id="htn-iso-show-log">Log anzeigen</button>';
+    controls.innerHTML = '<button type="button" id="htn-iso-apply">ISO-3166-2-Ländercode und letztes IP-Oktett einsetzen</button> <button type="button" id="htn-iso-show-log">Log anzeigen</button>';
     form.insertAdjacentElement('beforebegin', controls);
     const modal = document.createElement('div');
     modal.id = 'htn-iso-log-modal';
@@ -91,9 +91,9 @@
   const style = document.createElement('style');
   style.textContent = '#htn-iso-controls button{margin:2px;padding:4px 8px;cursor:pointer}#htn-iso-log-modal{position:fixed;inset:0;z-index:10000;padding:40px 16px;background:rgba(0,0,0,.45);overflow:auto}#htn-iso-log-modal[hidden]{display:none}.htn-iso-log-box{max-width:760px;margin:auto;padding:20px;color:#111;background:#fff;border:2px solid #555;font:14px Arial,sans-serif}.htn-iso-close{float:right}.htn-iso-log-box pre{max-height:60vh;overflow:auto;white-space:pre-wrap}';
   document.head.appendChild(style);
-  addLog('Script geladen: ISO-3166-1 ohne Untergliederung.');
+  addLog('Script geladen: ISO-3166-2 ohne Untergliederung.');
   addInterface();
-  GM_registerMenuCommand('HTN: ISO-3166-1-Ländercode plus letztes IP-Oktett eintragen', applyCountryNames);
+  GM_registerMenuCommand('HTN: ISO-3166-2-Ländercode plus letztes IP-Oktett eintragen', applyCountryNames);
   GM_registerMenuCommand('HTN: Ausführungslog anzeigen', showLog);
 })();
 
