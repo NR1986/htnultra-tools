@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         HTN.ultra – PC-Namen aus Länder-IP und letztem IP-Oktett
-// @version      1.4.2
+// @version      1.4.3
 // @description  Setzt ISO-3166-2-Ländercodes direkt gefolgt vom letzten Oktett der HTN-IP-Adresse in PC-Namen und zeigt einen Ausführungslog an.
 // @author       NinoRossi
 // @match        https://www.htnultra.de/game.php*
