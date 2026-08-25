@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         HTN.ultra – PC-Namen aus Länder-IP und letztem IP-Oktett
-// @version      1.5.0
+// @version      1.5.1
 // @description  Setzt ISO-3166-2-Ländercodes direkt gefolgt vom letzten Oktett der HTN-IP-Adresse in PC-Namen und zeigt einen Ausführungslog an.
 // @author       NinoRossi
 // @match        https://www.htnultra.de/game.php*
@@ -10,7 +10,7 @@
 (function () {
   'use strict';
 
-  const scriptVersion = '1.5.0';
+  const scriptVersion = '1.5.1';
 
   /* Subnetz-Auswahl von HTN.ultra: 10.47.<Subnetz>.<Host>.
      Wichtig: Subnetz 61 ist Indien; dessen ISO-3166-1-Alpha-2-Code ist IN. */
@@ -72,15 +72,17 @@
       }
 
       const [country, iso] = details.country;
-      input.value = iso + details.host;
-      input.title = country + ' – ISO ' + iso;
+      // Die Hostnummer immer dreistellig speichern, z. B. GR1 als GR001.
+      const paddedHost = String(details.host).padStart(3, '0');
+      input.value = iso + paddedHost;
+      input.title = country + ' – ISO ' + iso + ', Host ' + paddedHost;
       input.classList.add('htn-subnet-renamed');
       input.dispatchEvent(new Event('input', { bubbles: true }));
       input.dispatchEvent(new Event('change', { bubbles: true }));
       changed += 1;
     });
 
-    let message = changed + ' PC-Namen mit ISO-Ländercode und Hostnummer gefüllt.';
+    let message = changed + ' PC-Namen mit ISO-Ländercode und dreistelliger Hostnummer gefüllt.';
     if (skipped.length) message += '\nÜbersprungen: ' + skipped.join(', ') + '.';
     alert(message + '\nBitte speichere die Änderungen anschließend mit dem Formular-Button.');
   }
