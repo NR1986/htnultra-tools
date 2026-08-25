@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         HTN.ultra – PC-Namen aus Länder-IP und letztem IP-Oktett
-// @version      1.4.0
+// @version      1.4.1
 // @description  Setzt ISO-3166-1-Ländercodes direkt gefolgt vom letzten Oktett der HTN-IP-Adresse in PC-Namen und zeigt einen Ausführungslog an.
 // @author       NinoRossi
 // @match        https://www.htnultra.de/game.php*
@@ -16,7 +16,7 @@
     1: 'US', 7: 'RU', 20: 'EG', 27: 'ZA', 30: 'GR', 31: 'NL', 32: 'BE', 33: 'FR',
     34: 'ES', 36: 'HU', 39: 'IT', 40: 'RO', 41: 'CH', 43: 'AT', 44: 'GB', 45: 'DK',
     46: 'SE', 47: 'NO', 48: 'PL', 49: 'DE', 51: 'PE', 52: 'MX', 53: 'CU', 54: 'AR',
-    55: 'BR', 56: 'CL', 57: 'CO', 58: 'VE', 60: 'MY', 61: 'AU', 62: 'ID', 63: 'PH',
+    55: 'BR', 56: 'CL', 57: 'CO', 58: 'VE', 59: 'GR', 60: 'MY', 61: 'AU', 62: 'ID', 63: 'PH',
     64: 'NZ', 65: 'SG', 66: 'TH', 81: 'JP', 82: 'KR', 84: 'VN', 86: 'CN', 90: 'TR',
     91: 'IN', 92: 'PK', 93: 'AF', 94: 'LK', 95: 'MM', 98: 'IR', 211: 'SS', 212: 'MA',
     213: 'DZ', 216: 'TN', 218: 'LY', 220: 'GM', 221: 'SN', 222: 'MR', 223: 'ML',
