@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         HTN.ultra – PC-Namen aus Länder-IP und letztem IP-Oktett
-// @version      1.5.1
+// @version      1.5.2
 // @description  Setzt ISO-3166-2-Ländercodes direkt gefolgt vom letzten Oktett der HTN-IP-Adresse in PC-Namen und zeigt einen Ausführungslog an.
 // @author       NinoRossi
 // @match        https://www.htnultra.de/game.php*
@@ -10,7 +10,7 @@
 (function () {
   'use strict';
 
-  const scriptVersion = '1.5.1';
+  const scriptVersion = '1.5.2';
 
   /* Subnetz-Auswahl von HTN.ultra: 10.47.<Subnetz>.<Host>.
      Wichtig: Subnetz 61 ist Indien; dessen ISO-3166-1-Alpha-2-Code ist IN. */
