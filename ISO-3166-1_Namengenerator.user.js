@@ -29,7 +29,8 @@
     87: ['Türkei', 'TR'], 91: ['Vietnam', 'VN'], 92: ['Afghanistan', 'AF'],
     99: ['Kuba', 'CU'], 101: ['Nordkorea', 'KP'], 102: ['USA', 'US'],
     103: ['Australien', 'AU'], 151: ['Sierra Leone', 'SL'], 152: ['Katar', 'QA'],
-    153: ['Vanuatu', 'VU'], 166: ['Monaco', 'MC'], 230: ['Antigua und Barbuda', 'AG']
+    153: ['Vanuatu', 'VU'], 166: ['Monaco', 'MC'], 230: ['Antigua und Barbuda', 'AG'],
+    112: ['Quest', 'QU'], 222: ['Myth', 'MY'], 235: ['Atlantis', 'IO'], 254: ['Marlboro Country', 'CB']
   });
   const unsupportedSubnets = Object.freeze({
     112: 'Quest', 222: 'Myth', 235: 'Atlantis', 254: 'Marlboro Country'
