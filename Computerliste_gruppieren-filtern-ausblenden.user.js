@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         HTN.ultra Computerliste gruppieren und ausblenden
-// @version      2.0.1
+// @version      2.0.2
 // @description  Erweitert die Liste aller Computer um mehr frei wählbare Gruppierungen, einklappbare Gruppen sowie Regeln und Buttons zum kompletten Ausblenden einzelner PCs oder ganzer Gruppen.
 // @author       NinoRossi
 // @match        https://www.htnultra.de/game.php*
