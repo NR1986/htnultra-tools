@@ -4,8 +4,8 @@
 // @description  Erweitert die Liste aller Computer um mehr frei wählbare Gruppierungen, einklappbare Gruppen sowie Regeln und Buttons zum kompletten Ausblenden einzelner PCs oder ganzer Gruppen.
 // @author       NinoRossi
 // @match        https://www.htnultra.de/game.php*
-// @updateURL    https://github.com/NR1986/htnultra-tools/raw/refs/heads/main/Computerliste_gruppieren-filtern-ausblenden.user.js
-// @downloadURL  https://github.com/NR1986/htnultra-tools/raw/refs/heads/main/Computerliste_gruppieren-filtern-ausblenden.user.js
+// @updateURL    https://raw.githubusercontent.com/NR1986/htnultra-tools/main/Computerliste_gruppieren-filtern-ausblenden.user.js
+// @downloadURL  https://raw.githubusercontent.com/NR1986/htnultra-tools/main/Computerliste_gruppieren-filtern-ausblenden.user.js
 // @grant        none
 // ==/UserScript==
 
